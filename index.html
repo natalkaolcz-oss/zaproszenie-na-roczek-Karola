@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAPROSZENIE</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f9f5f0;
+            font-family: serif;
+            font-size: 16px;
+        }
+        .invitation {
+            width: 90vw;
+            max-width: 400px;
+            aspect-ratio: 1;
+            background: linear-gradient(145deg, #fff8f0, #f0e8d8);
+            border: 8px solid #d4c8a8;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            padding: 40px 30px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        .invitation::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 2px,
+                rgba(212,200,168,0.3) 2px,
+                rgba(212,200,168,0.3) 4px
+            );
+            border-radius: 20px;
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .flowers {
+            position: absolute;
+            font-size: 48px;
+            opacity: 0.8;
+        }
+        .flower-top-left { top: 10px; left: 20px; }
+        .flower-top-right { top: 10px; right: 20px; }
+        .flower-bottom-left { bottom: 60px; left: 20px; }
+        .flower-bottom-right { bottom: 60px; right: 20px; }
+        .title {
+            font-size: 2.2em;
+            font-weight: 400;
+            color: #6b4e31;
+            margin: 20px 0 10px;
+            letter-spacing: 0.05em;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        }
+        .name {
+            font-size: 2.8em;
+            font-weight: 300;
+            color: #8b4513;
+            margin: 10px 0 20px;
+            letter-spacing: 0.1em;
+            font-style: italic;
+        }
+        .date {
+            font-size: 1.4em;
+            color: #6b4e31;
+            margin: 0 0 30px;
+            font-weight: 400;
+        }
+        .duck {
+            font-size: 36px;
+            margin: 20px 0;
+            filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.1));
+        }
+        .rsvp {
+            font-size: 1.1em;
+            color: #6b4e31;
+            margin-top: 10px;
+        }
+        .rsvp input {
+            border: 2px solid #d4c8a8;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 1em;
+            font-family: serif;
+            width: 200px;
+            margin-top: 5px;
+            background: rgba(255,255,255,0.9);
+        }
+        @media (max-width: 480px) {
+            .invitation { width: 95vw; padding: 30px 20px; }
+            .title { font-size: 1.8em; }
+            .name { font-size: 2.4em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation">
+        <div class="content">
+            <div class="flowers flower-top-left">🌸</div>
+            <div class="flowers flower-top-right">🌺</div>
+            <div class="flowers flower-bottom-left">🌼</div>
+            <div class="flowers flower-bottom-right">🌺</div>
+            <h1 class="title">SERDECZNIE ZAPRASZAMY</h1>
+            <div class="name">KAROLA I LALA</div>
+            <div class="date">20 CZERWCA 2024r. GODZ. 14:00</div>
+            <div class="duck">🦆🦆</div>
+            <div class="rsvp">
+                <strong>RSVP</strong><br>
+                <input type="text" placeholder="Wpisz swoje imię">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
